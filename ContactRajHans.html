@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ContactRajhans</title>
+        <link rel="stylesheet" type="text/css" href="stylerules.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    
+        <script>
+        $(document).ready(function(){
+          $('#mailList').validate({
+            rules:
+          {
+            firstname:
+                 {
+                  required:true,
+                   minlength:2
+                 },
+            lastname:
+               {
+                  required:true,
+                 minlength:3
+               },
+           requirements:
+               {
+                required:true,
+                minlength:2
+               },
+          contactnumber:
+              {
+                required:true,
+                minlength:5,
+                digits: true
+              },
+           email:
+              {
+                required:true,
+                email: true
+               }
+           },
+            messages:
+            {
+              firstname:
+               {
+                required:"Enter your first name",
+                minlength:"Must be more than two characters"
+              },
+              lastname:
+              {
+                required:"Enter your last name",
+                minlength:"Must be more than three characters"
+              },
+              requirements:
+              {
+                required:"Please mention Requirements ",
+                minlength:"requirments should be greater than two characters"
+              },
+              contactnumber:
+               {
+                required:"Enter your contact number",
+                minlength:"Enter valid contact number",
+                digits: "contact number must be numeric"
+              },
+              email:
+              {
+                required:"You must provide an email address",
+                email: "Not a valid Email address"
+              }
+    
+            },
+          submitHandler: function(form)
+           {
+            form.submit();
+            }
+        });
+    
+      });
+      </script>
+        <meta charset="utf-8">
+    <meta name="keywords" content="Phone numbers, email addresses, ContactRajHans">
+    <meta name="description" content="We are available 24/7 for bookings and reservations. Feel free to call us!">
+    <meta name="author" content="Chandrakanth Gudur">
+    </head>
+
+    <body>
+        
+
+        <div id="container" class="centertext">
+            <header>
+                <nav>
+                    <table class='menu'>
+                      <tr>
+                      <td>  <a href="index.html">HOME</a> </td>
+                      <td>  <a href="ContactRajHans.html">CONTACT RAJHANS</a> </td>
+                        <td><a href="EventsatRajHans.html">EVENTS AT RAJHANS</a> </td>
+                        <td><a href="MemoriesatRajHans.html">MEMORIES AT RAJHANS </a> </td>
+                        <td><a href="RajHansMenu.html">RAJHANS MENU</a></td>
+                      </tr>
+                    </table>
+                </nav>
+            </header>
+            <h1>Contact RajHans</h1>
+            <img src="assets/contactus.jpg" alt="contactus Img" style="float:center" width="100" height="50">
+            
+            <div id="left"></div>
+            <div id="main">
+            <hr></div>
+            <h3>Register with us for reservations and event updates</h3>
+            <form id="mailList" action="AddToMailList.php" method="post">
+              <table>
+                <tr>
+                  <td><label for="firstname">First name:</label></td>
+                  <td><input type="text" id="firstname" name="firstname"></td>
+                </tr>
+                <tr>
+                  <td><label for="lastname">Last name:</label></td>
+                  <td><input type="text" id="lastname" name="lastname"></td>
+                </tr>
+                <tr>
+                  <td>
+                  <label for="doe">DateofEvent:</label>
+                  </td>
+                  <td>
+                  <input type="date" id="DOE" name="doe">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <label for="contactnumber">Contact Number:</label>
+                  </td>
+                  <td>
+                  <input type="tel" id="contactnumber" name="contactnumber">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <label for="email">Email:</label>
+                  </td>
+                  <td>
+                  <input type="email" id="email" name="email">
+                  </td>
+                </tr>
+                <td>
+                    <label for="cuisine">Cuisine:</label>
+                    </td>
+                    <td>
+                    <input type="radio" id="veg" name="cuisine" value="Veg">
+                    <label for="veg">Veg</label>
+                    <input type="radio" id="nonveg" name="cuisine" value="nonveg">
+                    <label for="nonveg">Non-Veg</label>
+                    </td>
+                <tr>
+                  <td>
+                  <label for="requirements">Specific Requirements:</label>
+                  </td>
+                  <td>
+                  <textarea rows="5" cols="30" id="requirements" name="requirements"></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <label for="Eventtype">Event type:</label>
+                  </td>
+                  <td>
+                  <input type="checkbox" id="Marriage" name="Eventtype" value="Marriage">
+                  <label for="Eventtype"> Marriage</label>
+                  <input type="checkbox" id="Birthday" name="Eventtype" value="Birthday">
+                  <label for="Eventtype"> Birthday</label>
+                  <input type="checkbox" id="Gettogethers" name="Eventtype" value="Gettogethers">
+                  <label for="Eventtype"> Gettogethers </label>
+                  <input type="checkbox" id="Others" name="Eventtype" value="Others">
+                  <label for="Eventtype"> Others </label>
+                  <td>
+                    <label for="Eventtype">(Please mention event type):</label>
+                    </td>
+                    <td>
+                    <textarea rows="1" cols="20" id="Eventtype" name="Eventtype"></textarea>
+                    </td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                  <label for="Gathering"> Gathering:</label>
+                  </td>
+                  <td>
+                  <select name="Gathering" id="Gathering">
+                    <option name="Gathering" id="10to30" value="10-30">10-30</option>
+                    <option name="Gathering" id="30to50" value="30-50">30-50</option>
+                    <option name="Gathering" id="50to70" value="50-70">50-70</option>
+                    <option name="Gathering" id="70to90" value="70-90">70-90</option>
+                  </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="centeralign">
+                  <input type="submit" id="submit" name="submit" value="Submit">
+                  </td>
+      
+                  <td class="centeralign">
+                  <input type="reset" id="reset" name="reset" value="Reset">
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <div id="main">We are available 24/7 for bookings and reservations. Feel free to call us!
+                <bl><li>Cell phone number : +919948123456</li>
+                    <li> landline: 04027358035</li>
+                    <li>Address: Door 211, Bhubaneshwar highway-44, Odisha,India-77076</li>
+                </bl>
+        </div>
+            <footer>
+                <a href="index.html">HOME</a> |
+                <a href="ContactRajHans.html">CONTACT RAJHANS</a> |
+                <a href="EventsatRajHans.html">EVENTS AT RAJHANS</a> |
+                <a href="MemoriesatRajHans.html">MEMORIES AT RAJHANS </a> |
+                <a href="RajHansMenu.html">RAJHANS MENU</a>
+            </footer>
+         </div>
+
+            
+            </body>
+
+            </html>
+

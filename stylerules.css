@@ -1,0 +1,52 @@
+header { background-color:white; }
+h1{font-family: Verdana; font-size: xx-large; color: orange ;}
+p{font-family: Futura;}
+nav{ float:center;background-color:white; }
+#container {
+    float:center;max-width:960px; margin:0 auto; background-color:white;
+}
+
+#left{
+    float:left; width:20%; background-color:olive;
+}
+
+#main{
+     background-color: black; color: red; font-family: Geneva;font-size: x-large;
+}
+
+footer{
+    clear: both; background-color:white ;
+}
+
+.centertext{
+    text-align: center;
+}
+.menu td{
+	padding: 10px;
+    background-color: yellow;
+    border: 3px solid red;
+    border-radius: 50px;
+    text-align: center;
+}
+#Services {
+    float: right;
+    padding: 10px;
+    background-color: white;
+    border: 10px solid rgb(217, 238, 26);
+    border-style: ridge;
+    border-radius: 50px;
+    color: rgb(19, 19, 18);
+    font-style: bold;
+    text-align: center;
+    margin-top: red;
+}
+input.error, textarea.error {
+    border: 1px solid #ff0000;
+}
+label.error{
+	color:#ff0000;
+	font-size:14px;
+}
+#mailList input, #mailList textarea{
+	margin-right:10px;
+}
